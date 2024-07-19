@@ -20,3 +20,13 @@ services:
       - ACCEPT_EULA=Y
     ports:
       - 5341:80
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    hostname: mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Password12!
+    ports:
+      - 1433:1433
